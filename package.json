@@ -1,8 +1,8 @@
 {
-  "name": "@cocore/swap-sdk",
+  "name": "@core-dex/sdk",
   "license": "MIT",
   "version": "1.0.0",
-  "description": "⚒️ An SDK for building applications on top of CocoreSwap",
+  "description": "⚒️ An SDK for building applications on top of CORE DEX",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -10,10 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/CocoreProjects/cocoreswap-sdk"
+    "url": "https://github.com/CORE-DEX/coredex-sdk"
   },
   "keywords": [
-    "cocoreswap",
+    "core dex",
     "uniswap",
     "ethereum"
   ],
@@ -35,7 +35,7 @@
     "toformat": "^2.0.0"
   },
   "devDependencies": {
-    "@cocore/swap-core": "^1.0.0-alpha",
+    "@core-dex/core": "^1.0.1",
     "@types/big.js": "^4.0.5",
     "@types/jest": "^24.0.25",
     "tsdx": "^0.14.1"

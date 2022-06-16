@@ -1,4 +1,4 @@
-# CocoreSwap SDK
+# CORE DEX SDK
 
 This repository has been forked from [UniswapV2](https://github.com/Uniswap/uniswap-sdk)
 
@@ -9,13 +9,13 @@ To run the tests, follow these steps. You must have at least node v10 and [yarn]
 First clone the repository:
 
 ```sh
-git clone https://github.com/CocoreProjects/cocoreswap-sdk.git
+git clone https://github.com/CORE-DEX/coredex-core.git
 ```
 
-Move into the cocoreswap-sdk working directory
+Move into the coredex-sdk working directory
 
 ```sh
-cd cocoreswap-sdk/
+cd coredex-sdk/
 ```
 
 Install dependencies

@@ -11,7 +11,7 @@ export abstract class BaseCurrency {
    */
   public abstract readonly isNative: boolean
   /**
-   * Returns whether the currency is a token that is usable in CocoreSwap without wrapping
+   * Returns whether the currency is a token that is usable in CORE DEX without wrapping
    */
   public abstract readonly isToken: boolean
 
@@ -56,8 +56,8 @@ export abstract class BaseCurrency {
   public abstract equals(other: Currency): boolean
 
   /**
-   * Return the wrapped version of this currency that can be used with the CocoreeSwap contracts. Currencies must
-   * implement this to be used in CocoreSwap
+   * Return the wrapped version of this currency that can be used with the CORE DEX contracts. Currencies must
+   * implement this to be used in CORE DEX
    */
   public abstract get wrapped(): Token
 }
