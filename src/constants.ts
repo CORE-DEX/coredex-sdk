@@ -16,7 +16,7 @@ export enum Rounding {
 
 export const MaxUint256 = JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff')
 
-export const FACTORY_ADDRESS = '0x193950159f7b3b23bBfe49ff90fD2B3b0aA1E72c'
+export const FACTORY_ADDRESS = '0x113d2B6BE54A0D46D4cb287c82B50dB2E914b203'
 
 export const INIT_CODE_HASH = '0x49bc0a6067f7b18489ee392419f6131ff6c252a51bea1ee17d2e0f34ffd96c28'
 
