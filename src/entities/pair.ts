@@ -6,7 +6,7 @@ import JSBI from 'jsbi'
 import { pack, keccak256 } from '@ethersproject/solidity'
 import { getCreate2Address } from '@ethersproject/address'
 
-import { FACTORY_ADDRESS, INIT_CODE_HASH, MINIMUM_LIQUIDITY, FIVE, _997, _1000, ONE, ZERO } from '../constants'
+import { FACTORY_ADDRESS, INIT_CODE_HASH, MINIMUM_LIQUIDITY, FIVE, _999, _1000, ONE, ZERO } from '../constants'
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors'
 
 export const computePairAddress = ({
@@ -115,7 +115,7 @@ export class Pair {
     }
     const inputReserve = this.reserveOf(inputAmount.currency)
     const outputReserve = this.reserveOf(inputAmount.currency.equals(this.token0) ? this.token1 : this.token0)
-    const inputAmountWithFee = JSBI.multiply(inputAmount.quotient, _997)
+    const inputAmountWithFee = JSBI.multiply(inputAmount.quotient, _999)
     const numerator = JSBI.multiply(inputAmountWithFee, outputReserve.quotient)
     const denominator = JSBI.add(JSBI.multiply(inputReserve.quotient, _1000), inputAmountWithFee)
     const outputAmount = CurrencyAmount.fromRawAmount(
@@ -141,7 +141,7 @@ export class Pair {
     const outputReserve = this.reserveOf(outputAmount.currency)
     const inputReserve = this.reserveOf(outputAmount.currency.equals(this.token0) ? this.token1 : this.token0)
     const numerator = JSBI.multiply(JSBI.multiply(inputReserve.quotient, outputAmount.quotient), _1000)
-    const denominator = JSBI.multiply(JSBI.subtract(outputReserve.quotient, outputAmount.quotient), _997)
+    const denominator = JSBI.multiply(JSBI.subtract(outputReserve.quotient, outputAmount.quotient), _999)
     const inputAmount = CurrencyAmount.fromRawAmount(
       outputAmount.currency.equals(this.token0) ? this.token1 : this.token0,
       JSBI.add(JSBI.divide(numerator, denominator), ONE)

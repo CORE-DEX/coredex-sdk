@@ -236,13 +236,13 @@ describe('Trade', () => {
       })
       it('returns slippage amount if nonzero', () => {
         expect(exactOut.maximumAmountIn(new Percent(JSBI.BigInt(0), JSBI.BigInt(100)))).toEqual(
-          CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(156))
+          CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(155))
         )
         expect(exactOut.maximumAmountIn(new Percent(JSBI.BigInt(5), JSBI.BigInt(100)))).toEqual(
-          CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(163))
+          CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(162))
         )
         expect(exactOut.maximumAmountIn(new Percent(JSBI.BigInt(200), JSBI.BigInt(100)))).toEqual(
-          CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(468))
+          CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(465))
         )
       })
     })
@@ -337,9 +337,9 @@ describe('Trade', () => {
         expect(exactOut.worstExecutionPrice(new Percent(0, 100))).toEqual(exactOut.executionPrice)
       })
       it('returns slippage amount if nonzero', () => {
-        expect(exactOut.worstExecutionPrice(new Percent(0, 100))).toEqual(new Price(token0, token2, 156, 100))
-        expect(exactOut.worstExecutionPrice(new Percent(5, 100))).toEqual(new Price(token0, token2, 163, 100))
-        expect(exactOut.worstExecutionPrice(new Percent(200, 100))).toEqual(new Price(token0, token2, 468, 100))
+        expect(exactOut.worstExecutionPrice(new Percent(0, 100))).toEqual(new Price(token0, token2, 155, 100))
+        expect(exactOut.worstExecutionPrice(new Percent(5, 100))).toEqual(new Price(token0, token2, 162, 100))
+        expect(exactOut.worstExecutionPrice(new Percent(200, 100))).toEqual(new Price(token0, token2, 465, 100))
       })
     })
   })
@@ -371,7 +371,7 @@ describe('Trade', () => {
       expect(result[0].outputAmount).toEqual(CurrencyAmount.fromRawAmount(token2, JSBI.BigInt(100)))
       expect(result[1].route.pairs).toHaveLength(2) // 0 -> 1 -> 2 at 12:12:10
       expect(result[1].route.path).toEqual([token0, token1, token2])
-      expect(result[1].inputAmount).toEqual(CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(156)))
+      expect(result[1].inputAmount).toEqual(CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(155)))
       expect(result[1].outputAmount).toEqual(CurrencyAmount.fromRawAmount(token2, JSBI.BigInt(100)))
     })
 
