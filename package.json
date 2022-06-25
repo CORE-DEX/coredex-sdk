@@ -1,7 +1,7 @@
 {
   "name": "@core-dex/sdk",
   "license": "MIT",
-  "version": "1.0.1-alpha",
+  "version": "1.0.2-alpha.0",
   "description": "⚒️ An SDK for building applications on top of CORE DEX",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
